@@ -31,10 +31,13 @@ public class Principal {
 		String status = ler.nextLine();
 		String s = status.toUpperCase();
 		
-		//Converte a String para o valor correspondido do status
+		//Converte a String para o valor correspondido do status no enum
+		//(A palavra deve ser digitada do jeito que está no enum)
 		StatusPedido sp = StatusPedido.valueOf(s);
 		System.out.print("Quantos itens tem o pedido? ");
 		int n = ler.nextInt();
+		
+		System.out.println();
 		
 		Pedido pedido = new Pedido(new Date(), sp, cliente);
 		
